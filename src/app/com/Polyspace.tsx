@@ -7,7 +7,7 @@ const Polyspace = () => {
     useEffect(() => {
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0x000);
-        scene.fog = new THREE.Fog(0xfff, 1, 1000);
+        scene.fog = new THREE.Fog(0xffffff, 1, 1000);
         const camera = new THREE.PerspectiveCamera(150, window.innerWidth / window.innerHeight, 0.01, 10000);
         const zoom = camera.position.z = 350;
 
@@ -17,7 +17,7 @@ const Polyspace = () => {
 
         const geometry = new THREE.TetrahedronGeometry(1000);
         const material = new THREE.MeshPhongMaterial({
-            color: 0xfff,
+            color: 0xffffff,
             flatShading: true,
             transparent: true,
             opacity: 0.1,
@@ -29,7 +29,7 @@ const Polyspace = () => {
         });
 
         const lineMaterial = new THREE.LineBasicMaterial({
-            color: 0xfff,
+            color: 0xffffff,
             transparent: true,
             opacity: 0.5
         });
